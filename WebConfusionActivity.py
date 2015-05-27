@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
 # Webconfusion activity: A Sugar activity to teach students about Web technologies like HTML,CSS,Javascript.
@@ -16,6 +16,7 @@ from sugar3.graphics.toolbarbox import ToolbarBox
 from sugar3.graphics.toolbutton import ToolButton
 from sugar3.graphics.toolbarbox import ToolbarButton
 from sugar3.activity.widgets import ActivityButton
+from sugar3.activity.widgets import ActivityToolbarButton
 from sugar3.activity.widgets import TitleEntry
 from sugar3.activity.widgets import StopButton
 from sugar3.activity.widgets import ShareButton
@@ -65,12 +66,14 @@ class WebConfusionActivity(activity.Activity):
         
         toolbar_box = ToolbarBox()
 
-        activity_button = ActivityButton(self)
+        activity_button = ActivityToolbarButton(self)
         toolbar_box.toolbar.insert(activity_button, 0)
         activity_button.show()
-
+	separator=Gtk.SeparatorToolItem(draw=False)
+	separator.set_expand(True)
+	toolbar_box.toolbar.insert(separator,-1)
+	separator.show()
 	stop_button = StopButton(self)
-        stop_button.props.accelerator = '<Ctrl><Shift>Q'
         toolbar_box.toolbar.insert(stop_button, -1)
         stop_button.show()
 
