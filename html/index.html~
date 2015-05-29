@@ -47,7 +47,7 @@ $(document).ready(function () {
 </head>
 <body>
   <center><h1><u>Webconfusion Challenges</u></h1></center>
-  <a href="challenge1/index.html"><img class="" id="content" src="a_data/HTML5.png"></a>
+  <a href="challenge1/index.html><img class="" id="content" src="a_data/HTML5.png"></a>
 <p></p>
   
 
