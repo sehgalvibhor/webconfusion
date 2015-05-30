@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # Webconfusion activity: A Sugar activity to teach students about Web technologies like HTML,CSS,Javascript.
-# Copyright (C) 2015 Vibhor Sehgal,Utkarsh Dhawan
+# Copyright (C) 2015 Vibhor Sehgal 
 
 
 from gi.repository import Gtk
