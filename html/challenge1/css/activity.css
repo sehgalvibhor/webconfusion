@@ -1,0 +1,140 @@
+#main-toolbar #activity-button {
+  background-image: url(../activity/activity-icon.svg);
+}
+
+body{
+	overflow: hidden;
+}
+.code{
+	background: #ccc;
+	width: 40%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	float: left;
+
+}
+.display{
+	background: #99FFCC;
+	width: 59.75%;
+	height: 100%;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	float: right;
+	border-left: 3px solid #ccc;
+}
+.level{
+	width: 100px;
+	height: 100px;
+	position: fixed;
+	right: 20px;
+	background: #fff;
+}
+.levhead{
+	background: #000;
+	height: 30px;
+	font-size: 20px;
+	color: #ccc;
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 30px;
+}
+.levnum{
+	font-size: 60px;
+	text-align: center;
+}
+.cheads{
+	background: #ccc;
+	width: 100%;
+	height: 20px;
+	text-align: right;
+	line-height: 20px;
+}
+textarea {
+	z-index: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	height: 280px;
+	max-height: 300px;
+	resize:none;
+}
+.display .footer{
+	background: #000;
+	position: absolute;
+	left: 58%;
+	bottom: 0px;
+	height: 60px;
+	width: 30%;
+	line-height: 60px;
+}
+.display .footer ul{
+	list-style-type: none;
+	line-height: 60px;
+	position: absolute;
+	top: -2px;
+	left: -16px;
+
+}
+.display .footer li{
+	float: left;
+	text-align: left;
+	line-height: 40px;
+	background: #fff;
+	width: 50px;
+	height: 40px;
+	margin-left: 70px;
+	padding-left: 20px;	
+	border-radius: 50px 50px;
+}
+.display .footer li:hover{
+	background: #ccc;
+}
+#side-menu
+{
+	display: none;
+	z-index: 3;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	background: #000;/*to be changed*/
+	width: 400px;
+	height: 100%;
+}
+#side-menu h2 a{
+	padding-left: 40px; 
+}
+#side-menu li{
+	position: relative;
+	height: 100px;
+	background: #ccc;
+	margin-bottom: 5px;
+	width: 100%;
+	text-align: center;
+	line-height: 20px;
+}
+#side-menu li:hover{
+	background: #fff;
+}
+#button-side-menu{
+	opacity: 0.4;
+	width: 120px;
+	text-align: center;
+	height: 40px;
+	background: #ccc;
+	z-index: 4;
+	position: absolute;
+	right: 0px;
+	top: 25%;
+	font-size: 30px;
+}
+#button-side-menu:hover{
+	opacity: 1.0;
+}
+li{
+	list-style-type:none;
+}
