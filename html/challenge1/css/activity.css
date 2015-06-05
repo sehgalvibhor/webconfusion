@@ -16,7 +16,7 @@ body{
 
 }
 .display{
-	background: #99FFCC;
+	background: url('../resources/bg.png');
 	width: 59.75%;
 	height: 100%;
 	right: 0px;
@@ -97,7 +97,7 @@ textarea {
 #side-menu
 {
 	display: none;
-	z-index: 3;
+	z-index: 10001;
 	position: absolute;
 	right: 0px;
 	top: 0px;
@@ -121,15 +121,16 @@ textarea {
 	background: #fff;
 }
 #button-side-menu{
-	opacity: 0.4;
-	width: 120px;
+	opacity: 0.7;
+	width: 100px;
+	line-height: 100px;
 	text-align: center;
-	height: 40px;
+	height: 100px;
 	background: #ccc;
 	z-index: 4;
 	position: absolute;
 	right: 0px;
-	top: 25%;
+	top: 20%;
 	font-size: 30px;
 }
 #button-side-menu:hover{
@@ -137,4 +138,34 @@ textarea {
 }
 li{
 	list-style-type:none;
+}
+#side-menu .close{
+	width: 32px;
+	-webkit-transition:all 0.7s;
+	-moz-transition:all 0.7s;
+	transition:all 0.7s;
+	-ms-transition:all 0.7s;
+	-o-transition:all 0.7s;
+	opacity: 0.7;
+}
+#side-menu .close:hover{
+	opacity: 1.0;
+}
+.problem{
+	position: absolute;
+	background: #eee;
+	border-radius: 10px;
+	color: #ccc;
+	text-align: center;
+	font-size: 20px;
+	width: 120px;
+	height: auto;
+	right: 10px;
+	top: 20%;
+	z-index: 2000;
+	opacity: 1.0;
+	display: none;
+}
+.problem:hover{
+	display: block;
 }

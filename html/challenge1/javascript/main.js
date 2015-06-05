@@ -15,3 +15,12 @@ function run(){
  var html=editor.CodeMirror.getValue();
  alert(html);
 }
+function delayhovmsg(){
+	window.setTimeout(hovmsg,1500);
+}
+function hovmsg(){
+	document.getElementById('hovmsg').style.display="block";
+}
+function remmsg(){
+	document.getElementById('hovmsg').style.display="none";
+}
