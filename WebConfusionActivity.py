@@ -1,7 +1,7 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Webconfusion activity: A Sugar activity to teach students about Web technologies like HTML,CSS,Javascript.
+# WebConfusion activity: A Sugar activity to teach students about Web technologies like HTML,CSS,Javascript.
 # Copyright (C) 2015 Vibhor Sehgal 
 
 
@@ -45,22 +45,15 @@ class WebConfusionActivity(activity.Activity):
 
     
     def make_mainview(self):
-        vbox = Gtk.VBox(True)
-
-        
-        self.webview = webview  = WebKit.WebView()
-        webview.show()
+        vbox = Gtk.VBox(True) 
+        self.webview = webview  = WebKit.WebView()        
+	webview.show()
         vbox.pack_start(webview, True, True, 0)
         vbox.show()
-
-
-        
-        web_app_page = os.path.join(activity.get_bundle_path(), "html/index.html")
+	web_app_page = os.path.join(activity.get_bundle_path(), "index.html")
         self.webview.load_uri('file://' + web_app_page)
-
-        
-        self.set_canvas(vbox)
-        vbox.show()
+	self.set_canvas(vbox)
+	vbox.show()
 
     def make_toolbar(self):
         
