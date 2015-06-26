@@ -6,15 +6,23 @@
 <head>
 	<title>.::Web Confusion::.</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+<<<<<<< HEAD
 	
 
 </head>
 
 <body>
+=======
+</head>
+
+<body>
+
+>>>>>>> e8326b6dc40bf5368a12e64d60ea6b7630700463
 	<div class="wrapper">
 		<a href="#"><div class="side"><img src="resources/tryit.png"></div></a>
 		<div class="main">
 			<blockquote>
+<<<<<<< HEAD
 				<h1>Diving In</h1>
 				Since this might be your first time so let's start from something really interesting.We are going to dive in and create a simple webpage.<br>The webpage is just like a page of your book.It consists of all the goodies like images,text etc.
 				<ul>So basically you need tools like these:</ul>
@@ -28,3 +36,65 @@
 </body>
 
 </html>
+=======
+				<ul class="content">
+					
+				</ul>
+
+			<button class="previousbutton">Previous</button>
+			<button class="nextbutton">Next</button>
+			</blockquote>			
+		</div>
+	</div>
+
+	<script id="template-test" type="text/x-handlebars-template">
+
+								<h2>{{Title}}</h2>
+								
+								<p>{{{content}}}</p>
+								
+</script>
+
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/handlebars-v3.0.3.js"></script>
+
+
+	<script type="text/javascript">
+	var templatedatacount = 0,totpage=2;
+	var $ulcontent = $("ul.content");
+	var $prevbutton =$(".previousbutton");
+	var $nextbutton = $(".nextbutton");
+		var data=[{
+				id:"0",
+				Title:"Diving In",
+				content:"Since this might be your first time so let's start from something really basic and interesting.We are going to dive in and create a simple webpage.The webpage is just like a page of your book.It consists of all the goodies like images,text etc.<br>The webpage is just like a page of your book.It consists of all the goodies like images,text etc.<br>So basically you need tools like these:<ul><li>Browser</li><li>Text Editor</li></ul>",
+			},{
+				id:"1",
+				Title:"Text Editor",
+				content:"Basically a text editor is a program used to edit text files like documents,source code of programs etc.<br>There exist text editors with every OS and software development packages.Some examples of basic text editors are:<br><ul>					<li>Write(Sugar)</li><li>vi(Terminal Activity)</li><li>nano(Terminal Activity)</li><li>Gedit(Sugar)</li></ul>"
+			}];
+		function calltemplate(){
+			var source = $("#template-test").html();
+			var template = Handlebars.compile(source);
+			var html = template(data[templatedatacount]);
+			$ulcontent.html(html);
+		}
+		calltemplate();
+
+		$nextbutton.on('click', function() {
+			if (templatedatacount!=totpage-1) {
+				templatedatacount++;
+				calltemplate();
+			}
+		});
+		$prevbutton.on('click',function(){
+			if (templatedatacount!=0){
+				templatedatacount--;
+				calltemplate();
+			}	
+		});
+
+	</script>
+</body>
+</html>	
+>>>>>>> e8326b6dc40bf5368a12e64d60ea6b7630700463
