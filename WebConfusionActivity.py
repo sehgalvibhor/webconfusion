@@ -50,10 +50,14 @@ class WebConfusionActivity(activity.Activity):
 	webview.show()
         vbox.pack_start(webview, True, True, 0)
         vbox.show()
+	self.swin=Gtk.ScrolledWindow()
 	web_app_page = os.path.join(activity.get_bundle_path(), "index.html")
+	vbox.scrollable=True
         self.webview.load_uri('file://' + web_app_page)
-	self.set_canvas(vbox)
+	self.swin.add_with_viewport(vbox)	
+	self.set_canvas(self.swin)
 	vbox.show()
+	self.swin.show()
 
     def make_toolbar(self):
         

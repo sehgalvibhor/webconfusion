@@ -4,10 +4,6 @@ body{
 	margin:0;
 	padding:0;
 	background: #ccc;
-<<<<<<< HEAD
-	overflow: hidden;
-=======
->>>>>>> e8326b6dc40bf5368a12e64d60ea6b7630700463
 }
 .wrapper{
 	position: relative;
@@ -19,6 +15,32 @@ body{
 	height: 100%;
 	background: url('../resources/bg.png');
 }
+/*Home Button*/
+.home{
+	text-decoration: none;
+	background: #fff;
+	width: 8%;
+	height: 40px;
+	z-index: 1004;
+	top: -10px;
+	left: 3%;
+	text-align: center;
+	line-height: 50px;
+	box-shadow: 1px 1px 1px #000;
+	position: absolute;
+	-webkit-transition:all 0.7s;
+	-o-transition:all 0.7s;
+	-moz-transition:all 0.7s;	
+	-ms-transition:all 0.7s;
+	transition:all 0.7s;
+
+}
+.home:hover{
+	top: 0px;
+	background: #339966;
+	color: #fff;
+}
+/*End Home Button*/
 
 /*Side bar*/
 
@@ -133,27 +155,20 @@ display: block;
 .main a:hover{
 	color: #072651;
 }
-<<<<<<< HEAD
-=======
 ul.content{
 	list-style-type: none;
 }
->>>>>>> e8326b6dc40bf5368a12e64d60ea6b7630700463
 li.success{
 	color: green;
 	list-style-type: none;
 	font-size: 19px;
 }
 .code{
-<<<<<<< HEAD
-	
-=======
 	position: relative;
 	left: 15%;
 	box-shadow: 1px 1px 1px #000;
 	background: #ddd;
 	padding: 10px;
 	width: 50%;	
->>>>>>> e8326b6dc40bf5368a12e64d60ea6b7630700463
 }
 /*End of Main Area*/
