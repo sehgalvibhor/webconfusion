@@ -1,0 +1,88 @@
+
+<!-- Designed and Developed by Utkarsh Dhawan for Sugar Labs -->
+<!--Links-Tutorial by Utkarsh Dhawan-->
+
+<html>
+
+<head>
+	<title>.::Web Confusion::.</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<a href="../../index.html" class="home">Home</a>
+		<p class="pagecount" id="pagination"></p>
+		<a href="#"><div class="side"><img src="../assets/resources/tryit.png"></div></a>
+		<div class="main">
+			<blockquote>
+				<ul class="content">
+					
+				</ul>
+
+			<button class="previousbutton">Previous</button>
+			<button class="nextbutton">Next</button>
+			</blockquote>			
+		</div>
+	</div>
+
+	<script id="template-test" type="text/x-handlebars-template">
+
+								<h2>{{Title}}</h2>
+								
+								<p>{{{content}}}</p>
+								
+</script>
+
+<script type="text/javascript" src="../assets/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/handlebars-v3.0.3.js"></script>
+
+
+	<script type="text/javascript">
+	var templatedatacount = 0,totpage=4;
+	var $ulcontent = $("ul.content");
+	var $prevbutton =$(".previousbutton");
+	var $nextbutton = $(".nextbutton");
+		var data=[{
+				id:"0",
+				Title:"Links",
+				content:"Links are found in nearly all web pages. Links allow users to click their way from page to page.<br>HTML links are <b>hyperlinks</b>.A hyperlink is a text or an image you can click on, and jump to another document.",
+			},{
+				id:"1",
+				Title:"The Types",
+				content:"The Linking in HTML can be of two types:<ul><li><b>Internal Linking</b>:Linking the elements within the same HTML page.</li><li><b>External Linking</b>:Linking two HTML pages.</li></ul>"
+			},{
+				id:"2",
+				Title:"Internal Linking",
+				content:"Internal linking uses id of any element on the same page to identify it's position and moves the web page's view to that area.<textarea disabled class='code'><html>\n<head>\n<title>Internal Linking</title>\n</head>\n<body>\n<a href='#target'>Click Me</a>\n\n<br><br><br><br><!--Just for pushing the heading a little downwards-->\n\n<h3 id='target'>This heading is the target</h3>\n</body>\n</html></textarea><div class='output'>Output:<br><a href='#target'>Click Me</a><br><br><br><br><h3 id='target'>This heading is the target</h3></div><br>"
+			},{
+				id:"3",
+				Title:"My To Do List",
+				content:"Today's task is to create a To do list.It is sometimes a good idea to make a list of the tasks to be done.So we are going to do the same.You have to code a page in the shell consisting of a heading for the page and a simple list Ordered/Unordered.You need to produce an output similar to this:<div class='output'>Output:<br><ul type='circle'><li>Brush Teeths</li><li>Go to School</li><li>Practice my web building skills</li></ul></div>"
+			}];
+		function calltemplate(){
+			var source = $("#template-test").html();
+			var template = Handlebars.compile(source);
+			var html = template(data[templatedatacount]);
+			$ulcontent.html(html);
+			document.getElementById('pagination').innerHTML="Page "+(templatedatacount+1)+" of "+totpage;
+		}
+		calltemplate();
+
+		$nextbutton.on('click', function() {
+			if (templatedatacount!=totpage-1) {
+				templatedatacount++;
+				calltemplate();
+			}
+		});
+		$prevbutton.on('click',function(){
+			if (templatedatacount!=0){
+				templatedatacount--;
+				calltemplate();
+			}	
+		});
+
+	</script>
+</body>
+</html>	
