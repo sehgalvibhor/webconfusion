@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
 # WebConfusion activity: A Sugar activity to teach students about Web technologies like HTML,CSS,Javascript.
@@ -26,10 +26,9 @@ from sugar3.presence import presenceservice
 from gi.repository import WebKit
 import logging
 import gconf
+from subprocess import call, Popen, PIPE
 
 from datetime import date
-
-
 
 
 class WebConfusionActivity(activity.Activity):
@@ -66,6 +65,17 @@ class WebConfusionActivity(activity.Activity):
         activity_button = ActivityToolbarButton(self)
         toolbar_box.toolbar.insert(activity_button, 0)
         activity_button.show()
+        self._go_home = ToolButton('go-home')
+        self._go_home.set_tooltip(_('Home page'))
+        self._go_home.connect('clicked', self._go_home_cb)
+        toolbar_box.toolbar.insert(self._go_home, -1)
+        self._go_home.show()
+        self._browse = ToolButton('browse')
+        self._browse.set_tooltip(_('Open in Browse'))
+        self._browse.connect('clicked', self._do_browse_clicked_cb)
+        toolbar_box.toolbar.insert(self._browse, -1)
+        self._browse.show()
+
 	separator=Gtk.SeparatorToolItem(draw=False)
 	separator.set_expand(True)
 	toolbar_box.toolbar.insert(separator,-1)
@@ -76,3 +86,20 @@ class WebConfusionActivity(activity.Activity):
 
    	self.set_toolbar_box(toolbar_box)
         toolbar_box.show()
+
+    def _do_browse_clicked_cb(self, widget):
+        current_challenge = self.webview.get_title()
+        #current_challenge is of the form challenge 2
+        #url is 'challenges/challenge2/challenge.html'
+        current_challenge = 'challenges/'+current_challenge.replace(' ','').lower()+'/challenge.html'
+        current_challenge = 'file://'+os.path.join(activity.get_bundle_path(), current_challenge)
+        print 'current_challenge', current_challenge
+        bundle = 'org.laptop.Browser'
+        cmd = "sugar-launch --object_uri '" + current_challenge +"' "+bundle
+        print 'cmd', cmd
+        call(cmd, shell=True)
+
+    def _go_home_cb(self, widget):
+        web_app_page = os.path.join(activity.get_bundle_path(), "index.html")
+        self.webview.load_uri('file://' + web_app_page)
+
