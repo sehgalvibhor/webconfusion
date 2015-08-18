@@ -14,7 +14,6 @@
 	<div class="wrapper">
 		<a href="../../index.html" class="home">Home</a>
 		<p class="pagecount" id="pagination"></p>
-		<a href="#"><div class="side"><img src="../assets/resources/tryit.png"></div></a>
 		<div class="main">
 			<blockquote>
 				<ul class="content">
@@ -40,31 +39,28 @@
 
 
 	<script type="text/javascript">
-	var templatedatacount = 0,totpage=5;
+	var templatedatacount = 0,totpage=4;
 	var $ulcontent = $("ul.content");
 	var $prevbutton =$(".previousbutton");
 	var $nextbutton = $(".nextbutton");
 		var data=[{
 				id:"0",
 				Title:"Heading Tags",
-				content:"Heading Tags are the most popular and useful tags. These tags are used to define HTML headings. There are 6 heading tags <h1> to <h6>. <h1> defines the most important heading and <h6> defines the least important.",
+				content:"Heading Tags are the most popular and useful tags. These tags are used to define HTML headings.<br> There are 6 heading tags < h1 > to < h6 >. < h1 > defines the most important heading and < h6 > defines the least important.<br>Each header tag indicates the relative importance of each section it is heading: < H1 ...> is for the major sections of your document, or as the one header to the entire document. < H2 ...> is for the secondary sections of your document, etc.",
 			},{
 				id:"1",
 				Title:"The Types",
-				content:"The Linking in HTML can be of two types:<ul><li><b>Internal Linking</b>:Linking the elements within the same HTML page.</li><li><b>External Linking</b>:Linking two HTML pages.</li></ul>"
+				content:"The headings in HTML can be of six types:<ol><li><h1> This is using < h1 > tag </h1></li><li><h2> This is using < h2 > tag </h2></li><li><h3> This is using < h3 > tag </h3></li><li><h4> This is using < h4 > tag </h4></li><li><h5> This is using < h5 > tag </h5></li><li><h6> This is using < h6 > tag </h6></li></ol>"
 			},{
 				id:"2",
-				Title:"Internal Linking",
-				content:"Internal linking uses id of any element on the same page to identify it's position and moves the web page's view to that area.<textarea disabled class='code'><html>\n<head>\n<title>Internal Linking</title>\n</head>\n<body>\n<a href='#target'>Click Me</a>\n\n<br><br><br><br><!--Just for pushing the heading a little downwards-->\n\n<h3 id='target'>This heading is the target</h3>\n</body>\n</html></textarea><div class='output'>Output:<br><a href='#target'>Click Me</a><br><br><br><br><h3 id='target'>This heading is the target</h3></div><br>The <b>&lt;a&gt</b> tag is used to add a hyperlink in a webpage.<br>The <b>href</b> attribute is used to specify the location of the link.<br>The <b>#target</b> is used for internal linking where # identifies an activity and target is the id of the element."
+				Title:"Syntax of Heading Tags",
+				content:"<p style=text-align:left>Syntax of heading tags are similar to normal HTML tags, with each having an opening and closing tag.</p><div class=code>< html ><br>< body ><br> Displaying  syntax of heading tags <br>< h1 > Heading 1 < /h1 ><br>  < h2 > Heading 2 < /h2 ><br>< body ><br>< /html ></div>"
 			},{
 				id:"3",
-				Title:"External Linking",
-				content:"External linking takes input the address location of the linked page in the href attribute.The path or the address location of the linked file can be given in two ways:<br>1.Complete Path(Not Recommended)<q>eg.file://Desktop/about.html</q><br>2.Relative Path(<b>Recommended</b>)<q>eg. about.html</q>(if about.html is in the same folder)<br><textarea disabled class='code'><html>\n<head>\n<title>Internal Linking</title>\n</head>\n<body>\n<a href='http://google.com' target='blank'>Go to Google</a>\n</body>\n</html></textarea><div class='output'>Output:<br><a href='http://google.com' target='blank'>Go to Google</a></div><br>The <b>&lt;a&gt</b> tag is used to add a hyperlink in a webpage.<br>The <b>href</b> attribute is used to specify the location of the link.<br>The <b>target</b> attribute is used for setting the target space for the linked webpage.<br><table><tr><th>Value</th><th>Description</th></tr><tr><td>_blank</td><td>Opens the linked document in a new window or tab</td></tr><tr><td>_self</td><td>Opens the linked document in the same frame as it was clicked (this is default)</td></tr><tr><td>_parent</td><td>Opens the linked document in the parent frame</td></tr><tr><td>_top</td><td>Opens the linked document in the full body of the window</td></tr><tr><td>framename</td><td>Opens the linked document in a named frame</td></tr></table>"
-			},{
-				id:"4",
-				Title:"My Profile",
-				content:"The Challenge for today would be to design your very own Menu.Whenever you visit a website you usually see a navigation bar to go to different webpages on a website this navigation area is called a menu.<br>So today's task involves designing a menu.Having links which intenally link different paragraphs of your profile.Yes you heard it right your profile.You need to design a page which contains content that is <b>all about you</b>.Each part like About,Interests,Hobbies,Favorite Cartoon Character etc.The code would something like this:<br><textarea disabled class='code'><html>\n<head>\n<title>My menu</title>\n</head>\n<body>\n\n<a href='#home'>Home</a>\n\n<a href='#about'>About</a>\n\n<a href='#interest'>Interests</a>\n\n<br>\n\n<h3 id='home'>Home</h3>\n\nThis is my profile page and contains all about me.\n\n<br><h3 id='about'>About</h3>\n\n My name is Raju and I study in Timbaktu.My Father is a farmer and mother is a teacher\n\n<br>\n\n<h3 id='interest'>Interests</h3>\n\n I like to play football and I also like to make websites.\n\n</body>\n</html></textarea>"
-			}];
+				Title:"Heading Challenge",
+				content:"Your task is to design a similar webpage as shown in the image below. All the best ! <p> <img src = challenge.png>"
+			}
+			];
 		function calltemplate(){
 			var source = $("#template-test").html();
 			var template = Handlebars.compile(source);
