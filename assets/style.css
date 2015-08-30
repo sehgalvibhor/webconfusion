@@ -1,0 +1,165 @@
+/*
+	RESET & BASIC SETUP
+*/
+
+* {
+	margin: 0; 
+	padding: 0; 
+}
+
+body { 
+	font-size: 50.5%; 
+	font-family: 'Lucida Grande', Helvetica, sans-serif;
+	color: black; 
+	padding: 20px;
+}
+
+tr { 
+	vertical-align: top;
+}
+
+            #mainContainer {
+                width: 100%;
+                text-align:center;
+            }
+            #divCircle {
+                margin-left:auto;
+                margin-right:auto;
+                width: 400px;
+                height: 500px;
+                position: relative;
+            }
+            #divCircle img {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                border:3px solid black;
+            }
+            #middleBubble {
+                text-align:center;
+                vertical-align:top;
+                background: url(images/home-blank-bubble.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: #252525;
+                /*#6d6e71*/
+                font-size: 1em;
+                height:200px;
+                width: 200px;
+                margin: auto;
+                position: absolute;
+                text-align:center;
+                border:5px solid black;
+            }
+            #middleBubble b {
+                font-size: 1.2em;
+            }
+            #middleBubble p {
+                margin: 2em;
+            }
+            #mainContainer1 {
+                width: 100%;
+                text-align:center;
+            }
+            #divCircle1 {
+                margin-left:auto;
+                margin-right:auto;
+                width: 400px;
+                height: 500px;
+                position: relative;
+            }
+            #divCircle1 img {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                border:3px solid black;
+            }
+            #middleBubble1 {
+                text-align:center;
+                vertical-align:top;
+                background: url(images/home-blank-bubble.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: #252525;
+                /*#6d6e71*/
+                font-size: 1em;
+                height:200px;
+                width: 200px;
+                margin: auto;
+                position: absolute;
+                text-align:center;
+                border:5px solid black;
+            }
+            #middleBubble1 b {
+                font-size: 1.2em;
+            }
+            #middleBubble1 p {
+                margin: 2em;
+            }
+
+/*
+	STRUCTURE
+*/
+.post { 
+	width: 500px; 
+}
+
+
+/*
+	TYPOGRAPHY
+*/
+p { font-size: 1.2em; margin: 0 0 15px 0; }
+h1 { font-family: Helvetica, sans-serif; font-size: 4.0em;
+							  letter-spacing: -1px; color: #abc; }
+h2 { font-family: Helvetica, sans-serif; font-size: 3.0em;
+							  letter-spacing: -1px; color: #abc; }
+a { color: #0066cc; }
+a:hover { color: #abc; }
+
+/*
+    Container~crushermod
+*/
+
+.container{
+    background: #4caf50;
+    box-shadow: 1px 2px 2px #000;
+    float: left;
+    min-height: 400px;
+    max-height: auto;
+    text-align: center;
+    margin-top: 5.4%;
+    margin-bottom: 20px;
+    width: auto;
+}
+.post{
+    text-align: center;
+} 
+.post ul{
+    list-style-type: none;
+}
+#text{
+    background: #fff;
+}
+#text:hover{
+    background: #FFEB3B;
+}
+#text h2{
+    background: #000;
+    margin-bottom: 20px;
+}
+#text p{
+    margin-bottom: 20px;
+}
+h1{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    background: #009688;
+    margin-bottom: 30px;
+}
+
+
+/*
+    Container~crushermod  ends
+*/

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html >
+  <head>
+<style>
+
+.wcimg {
+    width:100px;
+    height:100px;
+}
+
+.main {
+    display:none;
+    background:red;
+    height:900px;
+    width:1200px;
+}
+
+}
+      
+.circle-container {
+  display:block;
+  background: chartreuse;
+  /* [1] */
+  width: 800px;
+  height: 600px;;
+  padding: 0;
+  border-radius: 500px;
+  list-style: none;
+  /* [2] */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  /* [3] */
+  margin: 5em auto 0;
+  border: solid 5px blue;
+}
+.circle-container > * {
+  /* [4] */
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5em;
+  height: 5em;
+  margin: -3em;
+}
+.circle-container > *:nth-of-type(1) {
+  -moz-transform: rotate(0deg) translate(30em) rotate(-0deg);
+  -ms-transform: rotate(0deg) translate(30em) rotate(-0deg);
+  -webkit-transform: rotate(0deg) translate(30em) rotate(-0deg);
+  transform: rotate(0deg) translate(30em) rotate(-0deg);
+}
+.circle-container > *:nth-of-type(2) {
+  -moz-transform: rotate(45deg) translate(3em) rotate(-45deg);
+  -ms-transform: rotate(45deg) translate(3em) rotate(-45deg);
+  -webkit-transform: rotate(45deg) translate(3em) rotate(-45deg);
+  transform: rotate(45deg) translate(3em) rotate(-45deg);
+}
+.circle-container > *:nth-of-type(3) {
+  -moz-transform: rotate(90deg) translate(3em) rotate(-90deg);
+  -ms-transform: rotate(90deg) translate(3em) rotate(-90deg);
+  -webkit-transform: rotate(90deg) translate(3em) rotate(-90deg);
+  transform: rotate(90deg) translate(3em) rotate(-90deg);
+}
+.circle-container > *:nth-of-type(4) {
+  -moz-transform: rotate(135deg) translate(3em) rotate(-135deg);
+  -ms-transform: rotate(135deg) translate(3em) rotate(-135deg);
+  -webkit-transform: rotate(135deg) translate(3em) rotate(-135deg);
+  transform: rotate(135deg) translate(3em) rotate(-135deg);
+}
+.circle-container > *:nth-of-type(5) {
+  -moz-transform: rotate(180deg) translate(3em) rotate(-180deg);
+  -ms-transform: rotate(180deg) translate(3em) rotate(-180deg);
+  -webkit-transform: rotate(180deg) translate(3em) rotate(-180deg);
+  transform: rotate(180deg) translate(3em) rotate(-180deg);
+}
+.circle-container > *:nth-of-type(6) {
+  -moz-transform: rotate(225deg) translate(3em) rotate(-225deg);
+  -ms-transform: rotate(225deg) translate(3em) rotate(-225deg);
+  -webkit-transform: rotate(225deg) translate(3em) rotate(-225deg);
+  transform: rotate(225deg) translate(3em) rotate(-225deg);
+}
+.circle-container > *:nth-of-type(7) {
+  -moz-transform: rotate(270deg) translate(3em) rotate(-270deg);
+  -ms-transform: rotate(270deg) translate(3em) rotate(-270deg);
+  -webkit-transform: rotate(270deg) translate(3em) rotate(-270deg);
+  transform: rotate(270deg) translate(3em) rotate(-270deg);
+}
+.circle-container > *:nth-of-type(8) {
+  -moz-transform: rotate(315deg) translate(3em) rotate(-315deg);
+  -ms-transform: rotate(315deg) translate(3em) rotate(-315deg);
+  -webkit-transform: rotate(315deg) translate(3em) rotate(-315deg);
+  transform: rotate(315deg) translate(3em) rotate(-315deg);
+}
+.circle-container a {
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px blue;
+}
+.circle-container img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.circle-container img:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+#contain {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 280px;
+  left: 520px;
+  z-index:10;
+  
+}
+#contain2 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 155px;
+  left: 395px;
+  z-index:5;
+  
+}
+
+#navi,
+#infoi {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 40px;
+  left: 5px;
+}
+body {
+  background:'challenges/divingin/resources/bg.png;
+}
+		</style>
+<center><h1><u>WEBCONFUSION CHALLENGES</u></h1></center>
+<br>
+<div id="contain">	
+ <ul class='circle-container'>
+  <li><a href='challenges/divingin/index.html'><img id="content" src='challenges/divingin/5.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  </ul>   
+ </div>
+  <div id="infoi">
+    
+  
+<ul class='circle-container1'>
+<li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+<li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+<li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+
+</ul>
+</div>
+<div id='contain2'>
+<ul class='circle-container2'>
+<li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+<li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+  <li><a href='#'><img id="content" src='challenges/divingin/sl.png'></a></li>
+</ul>
+</div>
+  
+		
+  </body>
+</html>
