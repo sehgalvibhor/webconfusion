@@ -8,6 +8,8 @@
 	<title>.::Web Confusion::.</title>
 	<link rel="stylesheet" type="text/css" href="../assets/css/avgrund.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../assets/font-awesome-4.4.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -15,7 +17,7 @@
 	<div class="wrapper">
 		<a href="../../index.html" class="home">Home</a>
 		<p class="pagecount" id="pagination"></p>
-		<a href="#"><div class="side"><img src="../assets/resources/tryit.png"></div></a>
+		<a href="#"><div class="side"></div></a>
 		<div class="main">
 			<blockquote>
 				<ul class="content">
@@ -42,7 +44,7 @@
 
 
 	<script type="text/javascript">
-	var templatedatacount = 0,totpage=5;
+	var templatedatacount = 0,totpage=6;
 	var $ulcontent = $("ul.content");
 	var $prevbutton =$(".previousbutton");
 	var $nextbutton = $(".nextbutton");
@@ -61,13 +63,17 @@ var data=[{
 			},{
 				id:"3",
 				Title:"Opening the Shell",
-				content:"The JavaScript Shell can be very easily accessed by adhering to the following steps:<ul><li>Open the Browse Activity.</li><li>Go to github.com/</li></ul>"
+				content:"The JavaScript Shell can be very easily accessed by adhering to the following steps:<ul><li>Open the Browse Activity.</li><li>Now click on the <i class='fa fa-ellipsis-h fa-2x' style='color:#F94300;padding:3px'></i> in the top bar.</li><li>You observe the web console launched(<b>shell</b>).</li><li>Now you can try out writing your HTML,CSS and JavaScript code and observe the output in real time enviounment.</li></ul>"
 			},{
 				id:"4",
+				Title:"Comments",
+				content:"<i>Comments are part of your code but not the output.</i><br>Comment tags <!-- and --> are used to insert comments in HTML.<br>Comments are not displayed by the browser, but they can help document your HTML.<br>With comments you can place notifications and reminders in your HTML:<br><textarea disabled class='code'><html>\n<head>\n<title>Adding Comments</title>\n</head>\n<body>\n\n<!-- This is a comment -->\n<p>This is a paragraph.</p>\n<!-- Remember to add more information here -->\n\n</body>\n</html></textarea>"
+			},{
+				id:"5",
 				Title:"Hello",
 				content:"So Welcome to the world of challenges.You would be given task at the end of every tutorial and you need to try it out in the Shell as easy as that.<br>As this would be your first challenge,we would go easy on you.You need to Design a very simple page looking something like this:<br><center><div class='content_img'><img src='../assets/resources/hello_world.png' class='inline_img'>This is the sample page.</div></center>"
 			},{
-				id:"5",
+				id:"6",
 				Title:"Hello World(Code Explained)",
 				content:"Below is the code for the output shown previously.<br><textarea disabled class='code'><html>\n<head>\n<title>Hello World</title>\n</head>\n<body>\n\t<h1>Hello World</h1>\n</body>\n</html></textarea><br><br>Everything written between <> are called as elements.<br>Every html code should be enclosed between the tags <b>&lt;html&gt; ... &lt;/html&gt;</b>.<br>The <b>&lt;head&gt;</b> element is a container for all the head elements. The <b>&lt;head&gt;</b> element can include a title for the document, scripts, styles, meta information, and more.<br>The <b>&lt;body&gt;</b> element defines the document's body.This element contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc.<br>The <b>&lt;h1&gt;</b> tag is used for giving the headings on the webpage."
 			}];
@@ -76,7 +82,7 @@ var data=[{
 			var template = Handlebars.compile(source);
 			var html = template(data[templatedatacount]);
 			$ulcontent.html(html);
-			document.getElementById('pagination').innerHTML="Page "+(templatedatacount+1)+" of "+totpage;
+			document.getElementById('pagination').innerHTML=""+(templatedatacount+1)+" of "+totpage;
 		}
 		calltemplate();
 
@@ -88,12 +94,12 @@ var data=[{
 
 			$(function() {
 			$('#next').avgrund({
-			height: 150,
+			height: 200,
 			holderClass: 'custom',
 			showClose: true,
 			showCloseText: 'close',
 			onBlurContainer: '.container',
-			template: '<br><center><h2>You have completed this chapter.</h2>'+'<button>Next</button><button>Practice</button></center>'
+			template: '<br><center><h2>You have completed this chapter.</h2>'+'<div class="message">Click<br><img src="../../icons/browse.svg"><br>To start with the challenge.</div></center>'
 		});
 	});
 			}

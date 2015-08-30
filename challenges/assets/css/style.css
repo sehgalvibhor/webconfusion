@@ -293,3 +293,21 @@ button:hover{
 
 }
 /*End Page Count*/
+
+/*Message*/
+.message{
+	text-align: center;
+	font-size: 17px;
+	width: auto;
+	height: auto;
+	padding: 10px;
+	background: #8bc34a;
+}
+.message img{
+	border-radius: 30px;
+	width: 35px;
+	padding: 3px;
+	display: inline-block;
+	display: inline;
+	zoom:1;
+}
