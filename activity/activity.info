@@ -1,7 +1,7 @@
 [Activity]
 name = WebConfusion
 activity_version = 1
-bundle_id = org.sugarlabs.WebConfusionActivity
-exec = sugar-activity WebConfusionActivity.WebConfusionActivity
+bundle_id = org.sugarlabs.WebConfusion
+exec = sugar-activity WebConfusion.WebConfusionActivity
 icon = activity-WebConfusion
 license = GPLv2+
