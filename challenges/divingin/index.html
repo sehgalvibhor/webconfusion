@@ -12,7 +12,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body id="body">
 
 	<div class="wrapper">
 		<a href="../../index.html" class="home">Home</a>
@@ -44,7 +44,7 @@
 
 
 	<script type="text/javascript">
-	var templatedatacount = 0,totpage=6;
+	var templatedatacount = 0,totpage=6,dialogshow=0,flag=0;
 	var $ulcontent = $("ul.content");
 	var $prevbutton =$(".previousbutton");
 	var $nextbutton = $(".nextbutton");
@@ -67,7 +67,7 @@ var data=[{
 			},{
 				id:"4",
 				Title:"Comments",
-				content:"<i>Comments are part of your code but not the output.</i><br>Comment tags <!-- and --> are used to insert comments in HTML.<br>Comments are not displayed by the browser, but they can help document your HTML.<br>With comments you can place notifications and reminders in your HTML:<br><textarea disabled class='code'><html>\n<head>\n<title>Adding Comments</title>\n</head>\n<body>\n\n<!-- This is a comment -->\n<p>This is a paragraph.</p>\n<!-- Remember to add more information here -->\n\n</body>\n</html></textarea>"
+				content:"<i>Comments are part of your code but not the output.</i><br>Comment tags <!-- and --> are used to insert comments in HTML.<br>Comments are not displayed by the browser, but they can help document your HTML.You can have multiline comments<b>(Refer the code below)</b><br>With comments you can place notifications and reminders in your HTML:<br><textarea disabled class='code'><html>\n<head>\n<title>Adding Comments</title>\n</head>\n<body>\n\n<!-- This is a comment -->\n<p>This is a paragraph.</p>\n<!-- \nRemember to add more information here\n\nThis a multiline comment\n -->\n\n</body>\n</html></textarea>"
 			},{
 				id:"5",
 				Title:"Hello",
@@ -85,23 +85,34 @@ var data=[{
 			document.getElementById('pagination').innerHTML=""+(templatedatacount+1)+" of "+totpage;
 		}
 		calltemplate();
-
 		$nextbutton.on('click', function() {
-			if (templatedatacount!=totpage-1) {
+			if (templatedatacount==totpage-1) {
+				dialogshow+=1;
+				flag=1;
+				$(function() {
+				$('#next').avgrund({
+				height: 200,
+				holderClass: 'custom',
+				closeByEscape:true,
+				closeByDocument:true,
+				showClose: true,
+				showCloseText: 'close',
+				onBlurContainer: '.container',
+				template: '<br><center><h2>You have completed this chapter.</h2>'+'<div class="message">Click<br><img src="../../icons/browse.svg"><br>To start with the challenge.</div></center>'
+				});
+
+				});
+			}
+			else{
+				if (flag==1) {
+					dialogshow+=1;
+				}
 				templatedatacount++;
 				calltemplate();
-			}else{
+			}
 
-			$(function() {
-			$('#next').avgrund({
-			height: 200,
-			holderClass: 'custom',
-			showClose: true,
-			showCloseText: 'close',
-			onBlurContainer: '.container',
-			template: '<br><center><h2>You have completed this chapter.</h2>'+'<div class="message">Click<br><img src="../../icons/browse.svg"><br>To start with the challenge.</div></center>'
-		});
-	});
+			if (dialogshow>2) {
+					Avgrund.hide();
 			}
 		});
 		$prevbutton.on('click',function(){
