@@ -6,9 +6,11 @@
         <title>WebConfusion</title>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,400italic,500' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="assets/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="assets/jquery.js"></script>
         <script src="assets/jquery.mousewheel.js"></script>
         <script>
+
             $(function() {
                 // $("#page-wrap").wrapInner("<table cellspacing='30'><tr>");
                 // $(".post").wrap("<td></td>");
@@ -17,6 +19,7 @@
                     event.preventDefault();
                 });
             });
+        
         </script>
         <style>
             body {
@@ -25,6 +28,7 @@
             }
         </style>
         <script type="text/javascript">
+      
             $(document).ready(function() {
                 //Center the "info" bubble in the  "circle" div
                 var divTop = ($("#divCircle").height() - $("#middleBubble").height()) / 2;
@@ -68,9 +72,10 @@
                     //turn on the new selection
                     $(this).attr("src", "assets/sl.png");
                     //set the content of the center bubble
-                    $("#middleBubble").html( $(this).data("bubble1") + "</b><br />" );
+                    $("#middleBubble").html( "<h3 style='background:#fff;font-size:20px;'>"+ $(this).data("bubble1") + "</h3></b><br />" );
                     $("#middleBubble").css({
-                        "background": "url(" + $(this).data("bubble2") + ")"
+                        "background": "url(" + $(this).data("bubble2") + ")",
+                        "color":"#000"
                     });
                     currentGridSelector = $(this).attr("id");
                 });
@@ -127,6 +132,8 @@
                 });
             });
         </script>
+
+
     </head>
     
     <body background="assets/bg.png">
@@ -137,10 +144,10 @@
                 <div id="divCircle">
                   <div id="middleBubble">&nbsp;</div> 
                   <a href="challenges/divingin/index.html">
-                  <img src="assets/sl.png" id="divingin" data-bubble1="Challenge1" data-bubble2="challenges/divingin/icon.png" >
+                  <img src="assets/sl.png" id="divingin" data-bubble1="Challenge 1" data-bubble2="challenges/divingin/icon.png" >
                   </a>
-		  <a href="challenges/links/index.html">
-                  <img src="assets/sl.png" id="links" data-bubble1="Challenge2" data-bubble2="challenges/links/icon.png" ></a>
+		  <a href="challenges/breakspace/index.html">
+                  <img src="assets/sl.png" id="links" data-bubble1="Challenge2" data-bubble2="challenges/breakspace/icon.png" ></a>
 		  <a href="challenges/lists/index.html"><img src="assets/sl.png" id="lists" data-bubble1="Challenge3" data-bubble2="challenges/lists/icon.png" ></a>
                   <a href="challenges/links/index.html"><img src="assets/sl.png" id="links" data-bubble1="Challenge4" data-bubble2="challenges/links/icon.png" ></a>
                   <a href="challenges/links/index.html"><img src="assets/sl.png" id="links" data-bubble1="Challenge5" data-bubble2="challenges/links/icon.png" ></a>

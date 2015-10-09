@@ -1,0 +1,103 @@
+
+<!-- Designed and Developed by Utkarsh Dhawan for Sugar Labs -->
+<!--Diving In-Tutorial by Utkarsh Dhawan-->
+
+<html>
+
+<head>
+	<title>.::Web Confusion::.</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/avgrund.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../assets/font-awesome-4.4.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body id="body">
+
+	<div class="wrapper">
+		<a href="../../index.html" class="home">Home</a>
+		<p class="pagecount" id="pagination"></p>
+		<a href="#"><div class="side"></div></a>
+		<div class="main">
+			<blockquote>
+				<ul class="content">
+					
+				</ul>
+
+			<button class="previousbutton" id="prev">Previous</button>
+			<button class="nextbutton" id="next">Next</button>
+			</blockquote>			
+		</div>
+	</div>
+
+	<script id="template-test" type="text/x-handlebars-template">
+
+								<h2>{{Title}}</h2>
+								
+								<p>{{{content}}}</p>
+								
+</script>
+
+<script type="text/javascript" src="../assets/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/handlebars-v3.0.3.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.avgrund.js"></script>
+
+
+	<script type="text/javascript">
+	var templatedatacount = 0,totpage=1,dialogshow=0,flag=0;
+	var $ulcontent = $("ul.content");
+	var $prevbutton =$(".previousbutton");
+	var $nextbutton = $(".nextbutton");
+	var data=[{
+				id:"0",
+				Title:"Breakspaces",
+				content:"A <b>breakspace</b> is the void space created between two lines.In a computer we usually use the 'enter' key to  achieve a breakspace but this breakspace does not effect the output of the html content.",
+			}];
+
+		function calltemplate(){
+			var source = $("#template-test").html();
+			var template = Handlebars.compile(source);
+			var html = template(data[templatedatacount]);
+			$ulcontent.html(html);
+			document.getElementById('pagination').innerHTML=""+(templatedatacount+1)+" of "+totpage;
+		}
+		calltemplate();
+		$nextbutton.on('click', function() {
+			if (templatedatacount==totpage-1) {
+				dialogshow+=1;
+				flag=1;
+				$(function() {
+				$('#next').avgrund({
+				height: 200,
+				holderClass: 'custom',
+				closeByEscape:true,
+				closeByDocument:true,
+				showClose: true,
+				showCloseText: 'close',
+				onBlurContainer: '.container',
+				template: '<br><center><h2>You have completed this chapter.</h2>'+'<div class="message">Click<br><img src="../../icons/browse.svg"><br>To start with the challenge.</div></center>'
+				});
+
+				});
+			}
+			else{
+				if (flag==1) {
+					dialogshow+=1;
+				}
+				templatedatacount++;
+				calltemplate();
+			}
+
+			if (dialogshow>2) {
+					Avgrund.hide();
+			}
+		});
+		$prevbutton.on('click',function(){
+			if (templatedatacount!=0){
+				templatedatacount--;
+				calltemplate();
+			}	
+		});
+	</script>
+</body>
+</html>	
