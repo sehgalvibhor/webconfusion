@@ -44,14 +44,22 @@
 
 
 	<script type="text/javascript">
-	var templatedatacount = 0,totpage=1,dialogshow=0,flag=0;
+	var templatedatacount = 0,totpage=3,dialogshow=0,flag=0;
 	var $ulcontent = $("ul.content");
 	var $prevbutton =$(".previousbutton");
 	var $nextbutton = $(".nextbutton");
 	var data=[{
 				id:"0",
 				Title:"Breakspaces",
-				content:"A <b>breakspace</b> is the void space created between two lines.In a computer we usually use the 'enter' key to  achieve a breakspace but this breakspace does not effect the output of the html content.",
+				content:"A <b>breakspace</b> is the void space created between two lines.In a computer we usually use the 'enter' key to  achieve a breakspace but this breakspace does not effect the output of the html content.For example:<br><textarea disabled class='code'><html>\n<head>\n<title>Breakspace Example</title>\n</head>\n<body>\n\nHello \n\nH\ne\nl\nl\nl\no\n\n</body>\n</html></textarea><div class='output'>Output:<br>\n\nHello \n\nH\ne\nl\nl\nl\no\n\n</div><br> As you might have noticed in the above example that even when the code had a breakspaced input yet the ouput shows the text in a single line with a space."
+			},{
+				id:"1",
+				Title:"The <br> tag",
+				content:"The &lt;br&gt; tag inserts a single line break.The &lt;br&gt; tag is an empty tag which means that it has no end tag.<br><b>Note:</b>Use the tag to enter line breaks, not to separate paragraphs."
+			},{
+				id:"2",
+				Title:"W\ne\nb\n\nC\no\nn\nf\nu\ns\ni\no\nn",
+				content:"Your task is very simple, you need to try out both the ways.First write the something as it is and then with each letter in one line.<br>Below is the code :<br><textarea disabled class='code'><html>\n<head>\n<title>Breakspaces</title>\n</head>\n<body>\n\nWebConfusion\nW\ne\nb\nC\no\nn\nf\nu\ns\ni\no\nn\n</body>\n</html></textarea><br><div class='output'>Output:<br>\n\nWebConfusion\nW\ne\nb\nC\no\nn\nf\nu\ns\ni\no\nn\n</div>"
 			}];
 
 		function calltemplate(){
